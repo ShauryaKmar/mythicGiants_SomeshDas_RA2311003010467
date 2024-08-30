@@ -32,4 +32,4 @@ Problem Statement:
 Being an influencer is a popular career option among the youth today. It is a diverse field with a wide variety of niches for creative individuals. It also provides a unique opportunity for advertising products and businesses through targeted ads. As such, there is a neccesity for a platform which connects creators to prospective advertising clients.
 
 Introduction:
-CreatorLink is a unique social platform which 
+CreatorLink is a unique social platform which connects creators to brands, streamlining the process of advertising and making it easily accessible to empower growing companies and creators.
