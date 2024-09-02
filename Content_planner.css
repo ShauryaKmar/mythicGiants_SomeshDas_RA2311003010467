@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* General Body Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40; /* Dark background for navbar */
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #00c853 !important; /* Highlight active link */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #fff;
+    padding: 1rem;
+    border-right: 1px solid #dee2e6;
+    min-height: 100vh;
+}
+
+.sidebar .nav-link {
+    color: #212529;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff; /* Highlight active link */
+    background-color: #e9ecef;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 2rem;
+}
+
+.card {
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.list-group-item {
+    border: none;
+}
+
+/* Dashboard Elements */
+.row {
+    margin-bottom: 1rem;
+}
+
+h1.h2 {
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+.btn-outline-secondary {
+    color: #212529;
+    border-color: #dee2e6;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #dee2e6;
+}
+
+/* Charts */
+.canvas-container {
+    margin-bottom: 1rem;
+}
+
+/* Quick Links */
+.quick-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #495057;
+}
+
+/* Dark/Light Mode Toggle Button */
+#theme-toggle {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+#theme-toggle:hover {
+    background-color: #5a6268;
+}
+/* Calendar Styles */
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+/* Notes Section */
+textarea#notes {
+    border: 1px solid #ced4da;
+}
+
+textarea#notes:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Save Notes Button */
+#save-notes {
+    width: 100%;
+}

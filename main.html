@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->  
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="campaigns.html">CreatorLink</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" href="campaigns.html">Home</a>
+          </li>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="main.html">Dashboard</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LinkPro.html">
+            LinkPro
+          </a>
+        </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="Content_planner.html">
+          Content Planner
+        </a>
+      </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Main Content -->
+      <main >
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2" style="padding: 10px;">Dashboard</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+          
+          </div>
+        </div>
+
+        <!-- Dashboard Elements -->
+        <div class="row">
+          <div class="col-md-4">
+            <!-- Pie Chart -->
+            <canvas id="performanceChart" width="70%" height="70%"></canvas>
+          </div>
+          <div class="col-md-4">
+            <!-- Line Chart -->
+            <canvas id="engagementChart" width="70%" height="70%"></canvas>
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                Recent Activities
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Campaign XYZ launched</li>
+                <li class="list-group-item">New sponsor joined</li>
+                <li class="list-group-item">You earned $500 from ABC campaign</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                Revenue Summary
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">$12,000</h5>
+                <p class="card-text">Total revenue this month.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                Top Campaigns
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Campaign A - $3,000</li>
+                <li class="list-group-item">Campaign B - $2,500</li>
+                <li class="list-group-item">Campaign C - $2,000</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                Pending Tasks
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Review new proposals</li>
+                <li class="list-group-item">Update profile</li>
+                <li class="list-group-item">Submit reports</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                Notifications
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">New message from Brand X</li>
+                <li class="list-group-item">Your proposal was accepted</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                Upcoming Deadlines
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Campaign Z due in 3 days</li>
+                <li class="list-group-item">Submit draft for Campaign Y</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                Profile Overview
+              </div>
+              <div class="card-body">
+                <p class="card-text">Welcome back, [Creator Name]! You have 5 active campaigns and $1,500 pending payments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script>
+    // Pie Chart for Performance Metrics
+    var ctx = document.getElementById('performanceChart').getContext('2d');
+    var performanceChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Content Creation', 'Engagement', 'Revenue'],
+        datasets: [{
+          label: 'Performance Metrics',
+          data: [40, 30, 30],
+          backgroundColor: ['#007bff', '#28a745', '#ffc107'],
+        }]
+      }
+    });
+
+    // Line Chart for Engagement Trends
+    var ctx2 = document.getElementById('engagementChart').getContext('2d');
+    var engagementChart = new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label: 'Engagement Trends',
+          data: [100, 120, 180, 150, 200, 220],
+          borderColor: '#007bff',
+          fill: false,
+        }]
+      }
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="theme-toggle.js"></script>
+</body>
+</html>

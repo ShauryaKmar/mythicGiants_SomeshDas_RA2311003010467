@@ -1,0 +1,18 @@
+/* Global Styles */
+body {
+    background-color: #ffffff;
+    color: #c4c4dd;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0s;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+    padding: 10px;
+}
+.row {
+    justify-items: center;
+    justify-content: space-evenly;
+}
